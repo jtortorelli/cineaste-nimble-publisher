@@ -20,6 +20,9 @@ defmodule CineasteWeb.Films.ShowLive do
     <h1>{@film.title}</h1>
     <p>Release Date: {@film.release_date}</p>
     <p>Runtime: {@film.runtime} minutes</p>
+    <p>Japanese Title: {@film.japanese_title}</p>
+    <p>Transliteration: {@film.transliteration}</p>
+    <p>Translation: {@film.translation}</p>
     <%= for work <- @film.original_works do %>
       <div>
         <h2>Original Work</h2>
@@ -43,6 +46,29 @@ defmodule CineasteWeb.Films.ShowLive do
     <ul>
       <%= for studio <- @film.studios do %>
         <li>{studio}</li>
+      <% end %>
+    </ul>
+    <h2>Series</h2>
+    <%= if @film.series do %>
+      <div>
+        <p>Title: {@film.series.title}</p>
+        <p>Entry Number: {@film.series.entry_number}</p>
+        <p>Next Entry: {@film.series.next_entry}</p>
+        <p>Previous Entry: {@film.series.previous_entry}</p>
+      </div>
+    <% end %>
+    <h2>Staff</h2>
+    <ul>
+      <%= for staff <- @film.staff do %>
+        <li>
+          {staff.role} - {staff.people |> Enum.map(& &1.name) |> Enum.join(", ")}
+        </li>
+      <% end %>
+    </ul>
+    <h2>Top Billed Cast</h2>
+    <ul>
+      <%= for person <- @film.top_billed_cast do %>
+        <li>{person.name} as {person.role}</li>
       <% end %>
     </ul>
     """

@@ -9,7 +9,6 @@ defmodule Cineaste.Application do
   def start(_type, _args) do
     children = [
       CineasteWeb.Telemetry,
-      Cineaste.Repo,
       {DNSCluster, query: Application.get_env(:cineaste, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Cineaste.PubSub},
       # Start a worker by calling: Cineaste.Worker.start_link(arg)

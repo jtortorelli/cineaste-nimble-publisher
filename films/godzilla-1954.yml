@@ -1,5 +1,4 @@
 title: Godzilla
-slug: godzilla-1954
 runtime: 97
 release_date: 1954-11-03
 japanese_title: ゴジラ
@@ -16,3 +15,116 @@ aliases:
     context: American Theatrical Release
 studios:
   - Toho Co., Ltd.
+series:
+  title: Godzilla
+  entry_number: 1
+  next_entry: Godzilla Raids Again (1955)
+  next_entry_slug: godzilla-raids-again-1955
+staff:
+  - role: Director
+    people:
+      - name: Honda Ishirô
+        slug: honda-ishiro
+  - role: Producer
+    people:
+      - name: Tanaka Tomoyuki
+        slug: tanaka-tomoyuki
+  - role: Screenplay
+    people:
+      - name: Murata Takeo
+      - name: Honda Ishirō
+        slug: honda-ishiro
+  - role: Photography
+    people:
+      - name: Tamai Masao
+  - role: Art Director
+    people:
+      - name: Kita Takeo
+        slug: kita-takeo
+  - role: Sound
+    people:
+      - name: Shimonaga Hisashi
+  - role: Lighting
+    people:
+      - name: Ishii Chôshirô
+  - role: Music
+    people:
+      - name: Ifukube Akira
+        slug: ifukube-akira
+  - role: Special Technology
+    people:
+      - name: Tsuburaya Eiji
+        slug: tsuburaya-eiji
+        alias: Tsumuraya Eiji
+  - role: Editor
+    people:
+      - name: Taira Kazuji
+top_billed_cast:
+  - role: Ogata Hideto
+    name: Takarada Akira
+    slug: takarada-akira
+  - role: Emiko Yamane
+    name: Kouchi Momoko
+    slug: kouchi-momoko
+  - role: Dr. Serizawa Daisuke
+    name: Hirata Akihiko
+    slug: hirata-akihiko
+  - role: Dr. Yamane Kyôhei
+    name: Shimura Takashi
+    slug: shimura-takashi
+  - role: Dr. Tanabe
+    name: Murakami Fuyuki
+    slug: murakami-fuyuki
+  - role: Hagiwara
+    name: Sakai Sachio
+    slug: sakai-sachio
+  - role: Nankai Steamship President
+    name: Ogawa Toranosuke
+  - role: Yamada Masaji
+    name: Yamamoto Ren
+    slug: yamamoto-ren
+  - role: Diet Chairman
+    name: Hayashi Kan
+  - role: MP Ôyama
+    name: Onda Seijirô
+    slug: onda-seijiro
+  - role: Countermeasures HQ Chief
+    name: Oikawa Takeo
+  - role: Mayor Inada
+    name: Sakakida Keiji
+    slug: sakakida-keiji
+  - role: Yamada Shinkichi
+    name: Suzuki Toyoaki
+  - role: Izuma
+    name: Kôdô Kuninori
+    slug: kodo-kuninori
+  - role: MP Ozawa
+    name: Sugai Kin
+  - role: Pleasure Cruise Passenger
+    name: Azuma Shizuko
+  - role: Yamada Kuni
+    name: Mano Tsuruko
+  - role: Tanabe's Assistant
+    name: Okabe Tadashi
+    slug: okabe-tadashi
+  - role: Pleasure Cruise Passenger
+    name: Kimata Kiyoshi
+  - role: Coast Guard Officer
+    name: Imaizumi Ren
+    slug: imaizumi-ren
+  - role: Tokyo Tower Announcer
+    name: Tachibana Masaaki
+    slug: tachibana-masaaki
+  - role: Ôdo Islander
+    name: Tsutsumi Yasuhisa
+    slug: tsutsumi-yasuhisa
+  - role: Ôdo Islander
+    name: Suzukawa Jirô
+  - role: Announcer
+    name: Iketani Saburô
+  - role: Daily Newspaper Desk
+    name: Tezuka Katsumi
+    slug: tezuka-katsumi
+  - role: Daily Newspaper Reporter
+    name: Nakajima Haruo
+    slug: nakajima-haruo
