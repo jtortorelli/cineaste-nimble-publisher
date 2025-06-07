@@ -6,7 +6,17 @@ defmodule Cineaste.Library do
   end
 
   def get_film(slug) do
-    :ets.lookup(:films, slug)
+    case :ets.lookup(:films, slug) do
+      [{_, film}] -> {:ok, film}
+      [] -> {:error, :not_found}
+    end
+  end
+
+  def list_films() do
+    :films
+    |> :ets.tab2list()
+    |> Enum.sort_by(fn {slug, _} -> slug end)
+    |> Enum.map(fn {slug, film} -> Map.put(film, "slug", slug) end)
   end
 
   def init(_) do

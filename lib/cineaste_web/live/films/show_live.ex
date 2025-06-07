@@ -10,65 +10,65 @@ defmodule CineasteWeb.Films.ShowLive do
 
   @impl true
   def handle_params(%{"slug" => slug}, _uri, socket) do
-    film = Films.get_film!(slug)
+    {:ok, film} = Films.get_film(slug)
     {:noreply, assign(socket, film: film)}
   end
 
   @impl true
   def render(assigns) do
     ~H"""
-    <h1>{@film.title}</h1>
-    <p>Release Date: {@film.release_date}</p>
-    <p>Runtime: {@film.runtime} minutes</p>
-    <p>Japanese Title: {@film.japanese_title}</p>
-    <p>Transliteration: {@film.transliteration}</p>
-    <p>Translation: {@film.translation}</p>
-    <%= for work <- @film.original_works do %>
+    <h1>{@film["title"]}</h1>
+    <p>Release Date: {@film["release_date"]}</p>
+    <p>Runtime: {@film["runtime"]} minutes</p>
+    <p>Japanese Title: {@film["japanese_title"]}</p>
+    <p>Transliteration: {@film["transliteration"]}</p>
+    <p>Translation: {@film["translation"]}</p>
+    <%= for work <- @film["original_works"] do %>
       <div>
         <h2>Original Work</h2>
-        <p>Title: {work.title}</p>
-        <p>Format: {work.format}</p>
+        <p>Title: {work["title"]}</p>
+        <p>Format: {work["format"]}</p>
         <h3>Authors</h3>
         <ul>
-          <%= for author <- work.authors do %>
-            <li>{author.name}</li>
+          <%= for author <- work["authors"] do %>
+            <li>{author["name"]}</li>
           <% end %>
         </ul>
       </div>
     <% end %>
     <h2>Aliases</h2>
     <ul>
-      <%= for alias <- @film.aliases do %>
-        <li>{alias.alias} ({alias.context})</li>
+      <%= for alias <- @film["aliases"] do %>
+        <li>{alias["alias"]} ({alias["context"]})</li>
       <% end %>
     </ul>
     <h2>Studios</h2>
     <ul>
-      <%= for studio <- @film.studios do %>
+      <%= for studio <- @film["studios"] do %>
         <li>{studio}</li>
       <% end %>
     </ul>
     <h2>Series</h2>
-    <%= if @film.series do %>
+    <%= if @film["series"] do %>
       <div>
-        <p>Title: {@film.series.title}</p>
-        <p>Entry Number: {@film.series.entry_number}</p>
-        <p>Next Entry: {@film.series.next_entry}</p>
-        <p>Previous Entry: {@film.series.previous_entry}</p>
+        <p>Title: {@film["series"]["title"]}</p>
+        <p>Entry Number: {@film["series"]["entry_number"]}</p>
+        <p>Next Entry: {@film["series"]["next_entry"]}</p>
+        <p>Previous Entry: {@film["series"]["previous_entry"]}</p>
       </div>
     <% end %>
     <h2>Staff</h2>
     <ul>
-      <%= for staff <- @film.staff do %>
+      <%= for staff <- @film["staff"] do %>
         <li>
-          {staff.role} - {staff.people |> Enum.map(& &1.name) |> Enum.join(", ")}
+          {staff["role"]} - {staff["people"] |> Enum.map(& &1["name"]) |> Enum.join(", ")}
         </li>
       <% end %>
     </ul>
     <h2>Top Billed Cast</h2>
     <ul>
-      <%= for person <- @film.top_billed_cast do %>
-        <li>{person.name} as {person.role}</li>
+      <%= for person <- @film["top_billed_cast"] do %>
+        <li>{person["name"]} as {person["role"]}</li>
       <% end %>
     </ul>
     """

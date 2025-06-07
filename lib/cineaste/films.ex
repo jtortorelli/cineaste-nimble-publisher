@@ -1,16 +1,9 @@
 defmodule Cineaste.Films do
-  alias Cineaste.Films.{Film, FilmParser}
+  def get_film(slug) do
+    Cineaste.Library.get_film(slug)
+  end
 
-  use NimblePublisher,
-    build: Film,
-    from: "./films/**/*.yml",
-    as: :films,
-    parser: FilmParser
-
-  def all_films, do: @films
-
-  def get_film!(slug) do
-    Enum.find(@films, &(&1.slug == slug)) ||
-      raise "Film with slug '#{slug}' not found"
+  def list_films do
+    Cineaste.Library.list_films()
   end
 end

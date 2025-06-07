@@ -5,7 +5,7 @@ defmodule CineasteWeb.Films.IndexLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, films: Films.all_films())}
+    {:ok, assign(socket, films: Films.list_films())}
   end
 
   @impl true
@@ -15,7 +15,7 @@ defmodule CineasteWeb.Films.IndexLive do
     <ul>
       <%= for film <- @films do %>
         <li>
-          <a href={~p"/films/#{film.slug}"}>{film.title}</a>
+          <a href={~p"/films/#{film["slug"]}"}>{film["title"]}</a>
         </li>
       <% end %>
     </ul>
