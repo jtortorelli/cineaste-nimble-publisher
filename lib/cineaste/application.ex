@@ -11,6 +11,7 @@ defmodule Cineaste.Application do
       CineasteWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:cineaste, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Cineaste.PubSub},
+      {Cineaste.Library, []},
       # Start a worker by calling: Cineaste.Worker.start_link(arg)
       # {Cineaste.Worker, arg},
       # Start to serve requests, typically the last entry
