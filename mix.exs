@@ -61,7 +61,8 @@ defmodule Cineaste.MixProject do
       {:bandit, "~> 1.5"},
       {:nimble_publisher, "~> 1.1"},
       {:earmark, "1.4.46"},
-      {:yaml_elixir, "~> 2.11"}
+      {:yaml_elixir, "~> 2.11"},
+      {:nimble_csv, "~> 1.2"}
     ]
   end
 
