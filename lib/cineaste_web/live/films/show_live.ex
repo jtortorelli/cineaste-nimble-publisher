@@ -71,6 +71,18 @@ defmodule CineasteWeb.Films.ShowLive do
         <li>{person["name"]} as {person["role"]}</li>
       <% end %>
     </ul>
+    <h2>Supporting Cast</h2>
+    <ul>
+      <%= for person <- @film["supporting_cast"] do %>
+        <li>{person["name"]} as {person["role"]}</li>
+      <% end %>
+    </ul>
+    <h2>Kaiju</h2>
+    <ul>
+      <%= for kaiju <- @film["kaiju"] do %>
+        <li>{kaiju["name"]}</li>
+      <% end %>
+    </ul>
     """
   end
 end
