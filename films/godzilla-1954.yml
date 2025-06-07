@@ -128,3 +128,83 @@ top_billed_cast:
   - role: Daily Newspaper Reporter
     name: Nakajima Haruo
     slug: nakajima-haruo
+supporting_cast:
+  - role: Eiko-maru Sailor
+    name: Echigo Ken
+    slug: echigo-ken
+    uncredited: true
+  - role: Eiko-maru Radio Operator
+    name: Fujiki Yû
+    slug: fujiki-yu
+    uncredited: true
+  - role: Countermeasures HQ Staff
+    name: Hinata Kazuo
+    slug: hinata-kazuo
+    uncredited: true
+  - role: MP
+    name: Hirose Shôichi
+    slug: hirose-shoichi
+    uncredited: true
+  - role: Undersecretary of Defense
+    name: Kumagai Takuzô
+    slug: kumagai-takuzo
+    uncredited: true
+  - role: Coast Guard Officer
+    name: Maki Sôkichi
+    uncredited: true
+  - role: Reporter
+    name: Mukai Jun'ichirô
+    slug: mukai-junichiro
+    uncredited: true
+  - role: Substation Engineer
+    name: Natsuki Junpei
+    slug: natsuki-junpei
+    uncredited: true
+  - role: Countermeasures HQ Staff
+    name: Ogata Rinsaku
+    slug: ogata-rinsaku
+    uncredited: true
+  - role: Countermeasures HQ Staff
+    name: Sata Yutaka
+    slug: sata-yutaka
+    uncredited: true
+  - role: Pleasure Cruise Passenger
+    name: Sahara Kenji
+    slug: sahara-kenji
+    uncredited: true
+  - role: Reporter
+    name: Sahara Kenji
+    slug: sahara-kenji
+    uncredited: true
+  - role: Countermeasures HQ Staff
+    name: Sakurai Girô
+    uncredited: true
+  - role: MP
+    name: Sera Akira
+    slug: sera-akira
+    uncredited: true
+  - role: Reporter
+    name: Shibuya Hideo
+    slug: shibuya-hideo
+    uncredited: true
+  - role: Coast Guard Officer
+    name: Tsubono Kamayuki
+    slug: tsubono-kamayuki
+    uncredited: true
+  - role: Police Officer
+    name: Tsuda Mitsuo
+    slug: tsuda-mitsuo
+    uncredited: true
+  - role: Countermeasures HQ Staff
+    name: Uno Kôji
+    slug: uno-koji
+    uncredited: true
+kaiju:
+  - name: Godzilla
+    portrayal:
+      - type: suit actor
+        people:
+          - name: Nakajima Haruo
+            slug: nakajima-haruo
+          - name: Tezuka Katsumi
+            slug: tezuka-katsumi
