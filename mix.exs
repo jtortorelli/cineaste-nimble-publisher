@@ -61,7 +61,14 @@ defmodule Cineaste.MixProject do
       {:bandit, "~> 1.5"},
       {:earmark, "1.4.46"},
       {:yaml_elixir, "~> 2.11"},
-      {:nimble_csv, "~> 1.2"}
+      {:nimble_csv, "~> 1.2"},
+      {:tabler_icons,
+       github: "tabler/tabler-icons",
+       tag: "v3.34.0",
+       sparse: "icons",
+       app: false,
+       compile: false,
+       depth: 1}
     ]
   end
 

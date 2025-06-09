@@ -2,13 +2,14 @@
    https://tailwindcss.com/docs/configuration */
 
 @import "tailwindcss" source(none);
+@plugin "@tailwindcss/typography";
 @source "../css";
 @source "../js";
 @source "../../lib/cineaste_web";
 
 @font-face {
     font-family: "Montserrat";
-    src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    src: url("../../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
     font-weight: 100 200 300 400 500 600 700 800 900;
     font-display: swap;
     font-style: normal;
@@ -16,7 +17,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf")
+    src: url("../../fonts/Montserrat-Italic-VariableFont_wght.ttf")
         format("truetype");
     font-weight: 100 200 300 400 500 600 700 800 900;
     font-display: swap;
@@ -25,7 +26,7 @@
 
 @font-face {
     font-family: "SonoMono";
-    src: url("../fonts/Sono-VariableFont_MONO_wght.ttf") format("truetype");
+    src: url("../../fonts/Sono-VariableFont_MONO_wght.ttf") format("truetype");
     font-weight: 100 200 300 400 500 600 700 800 900;
     font-display: swap;
     font-style: normal;
@@ -33,7 +34,7 @@
 
 @font-face {
     font-family: "Petrona";
-    src: url("../fonts/Petrona-VariableFont_wght.ttf") format("truetype");
+    src: url("../../fonts/Petrona-VariableFont_wght.ttf") format("truetype");
     font-weight: 100 200 300 400 500 600 700 800 900;
     font-display: swap;
     font-style: normal;
@@ -41,7 +42,8 @@
 
 @font-face {
     font-family: "Petrona";
-    src: url("../fonts/Petrona-Italic-VariableFont_wght.ttf") format("truetype");
+    src: url("../../fonts/Petrona-Italic-VariableFont_wght.ttf")
+        format("truetype");
     font-weight: 100 200 300 400 500 600 700 800 900;
     font-display: swap;
     font-style: italic;
@@ -49,7 +51,7 @@
 
 @font-face {
     font-family: "NotoSerifJP";
-    src: url("../fonts/NotoSerifJP-ExtraLight.otf") format("opentype");
+    src: url("../../fonts/NotoSerifJP-ExtraLight.otf") format("opentype");
     font-weight: 200;
     font-display: swap;
     font-style: normal;
@@ -57,7 +59,7 @@
 
 @font-face {
     font-family: "NotoSerifJP";
-    src: url("../fonts/NotoSerifJP-Light.otf") format("opentype");
+    src: url("../../fonts/NotoSerifJP-Light.otf") format("opentype");
     font-weight: 300;
     font-display: swap;
     font-style: normal;
@@ -65,7 +67,7 @@
 
 @font-face {
     font-family: "NotoSerifJP";
-    src: url("../fonts/NotoSerifJP-Medium.otf") format("opentype");
+    src: url("../../fonts/NotoSerifJP-Medium.otf") format("opentype");
     font-weight: 500;
     font-display: swap;
     font-style: normal;
@@ -73,7 +75,7 @@
 
 @font-face {
     font-family: "NotoSerifJP";
-    src: url("../fonts/NotoSerifJP-Regular.otf") format("opentype");
+    src: url("../../fonts/NotoSerifJP-Regular.otf") format("opentype");
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -81,7 +83,7 @@
 
 @font-face {
     font-family: "NotoSerifJP";
-    src: url("../fonts/NotoSerifJP-SemiBold.otf") format("opentype");
+    src: url("../../fonts/NotoSerifJP-SemiBold.otf") format("opentype");
     font-weight: 600;
     font-display: swap;
     font-style: normal;
@@ -89,7 +91,7 @@
 
 @font-face {
     font-family: "NotoSerifJP";
-    src: url("../fonts/NotoSerifJP-Bold.otf") format("opentype");
+    src: url("../../fonts/NotoSerifJP-Bold.otf") format("opentype");
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -97,7 +99,7 @@
 
 @font-face {
     font-family: "NotoSerifJP";
-    src: url("../fonts/NotoSerifJP-Black.otf") format("opentype");
+    src: url("../../fonts/NotoSerifJP-Black.otf") format("opentype");
     font-weight: 900;
     font-display: swap;
     font-style: normal;
@@ -113,6 +115,8 @@
 /* A Tailwind plugin that makes "hero-#{ICON}" classes available.
    The heroicons installation itself is managed by your mix.exs */
 @plugin "../vendor/heroicons";
+
+@plugin "../vendor/tablericons";
 
 /* daisyUI Tailwind Plugin. You can update this file by fetching the latest version with:
    curl -sLO https://github.com/saadeghi/daisyui/releases/latest/download/daisyui.js
@@ -134,9 +138,9 @@
     --color-base-200: oklch(25.26% 0.014 253.1);
     --color-base-300: oklch(20.15% 0.012 254.09);
     --color-base-content: oklch(97.807% 0.029 256.847);
-    --color-primary: oklch(58% 0.233 277.117);
+    --color-primary: oklch(50% 0.213 27.518);
     --color-primary-content: oklch(96% 0.018 272.314);
-    --color-secondary: oklch(58% 0.233 277.117);
+    --color-secondary: oklch(37% 0.034 259.733);
     --color-secondary-content: oklch(96% 0.018 272.314);
     --color-accent: oklch(60% 0.25 292.717);
     --color-accent-content: oklch(96% 0.016 293.756);
@@ -152,7 +156,7 @@
     --color-error-content: oklch(96% 0.015 12.422);
     --radius-selector: 0.25rem;
     --radius-field: 0.25rem;
-    --radius-box: 0.5rem;
+    --radius-box: 1rem;
     --size-selector: 0.21875rem;
     --size-field: 0.21875rem;
     --border: 1.5px;
@@ -169,9 +173,9 @@
     --color-base-200: oklch(96% 0.001 286.375);
     --color-base-300: oklch(92% 0.004 286.32);
     --color-base-content: oklch(21% 0.006 285.885);
-    --color-primary: oklch(70% 0.213 47.604);
+    --color-primary: oklch(50% 0.213 27.518);
     --color-primary-content: oklch(98% 0.016 73.684);
-    --color-secondary: oklch(55% 0.027 264.364);
+    --color-secondary: oklch(37% 0.034 259.733);
     --color-secondary-content: oklch(98% 0.002 247.839);
     --color-accent: oklch(0% 0 0);
     --color-accent-content: oklch(100% 0 0);
@@ -187,7 +191,7 @@
     --color-error-content: oklch(97% 0.014 343.198);
     --radius-selector: 0.25rem;
     --radius-field: 0.25rem;
-    --radius-box: 0.5rem;
+    --radius-box: 1rem;
     --size-selector: 0.21875rem;
     --size-field: 0.21875rem;
     --border: 1.5px;

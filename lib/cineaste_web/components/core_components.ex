@@ -408,6 +408,12 @@ defmodule CineasteWeb.CoreComponents do
     """
   end
 
+  def icon(%{name: "tabler-" <> _} = assigns) do
+    ~H"""
+    <span class={[@name, @class]} />
+    """
+  end
+
   ## JS Commands
 
   def show(js \\ %JS{}, selector) do
